@@ -2,6 +2,8 @@
 
 MCP Server for the Mattermost API, enabling Claude and other MCP clients to interact with Mattermost workspaces.
 
+> **⚠️ Security Notice:** A security audit was completed on 2026-02-16. See [`SECURITY_AUDIT.md`](SECURITY_AUDIT.md) for findings. **2 HIGH severity issues** require remediation before production use. See [`UPGRADE_PLAN.md`](UPGRADE_PLAN.md) for the modernization roadmap.
+
 ## Features
 
 This MCP server provides tools for interacting with Mattermost, including:
@@ -310,6 +312,19 @@ The script will display:
 - The sender's user ID and username
 - The timestamp of the message
 - The full message content
+
+## Security
+
+- **Never commit `config.local.json`** — it contains your access token and is gitignored
+- The server requires a Personal Access Token with appropriate permissions
+- See [`SECURITY_AUDIT.md`](SECURITY_AUDIT.md) for the full security audit report
+- See [`UPGRADE_PLAN.md`](UPGRADE_PLAN.md) for the planned security remediation and modernization
+
+## Documentation
+
+- [`SECURITY_AUDIT.md`](SECURITY_AUDIT.md) — Security audit findings and recommendations
+- [`CHANGELOG.md`](CHANGELOG.md) — Project changelog
+- [`UPGRADE_PLAN.md`](UPGRADE_PLAN.md) — Modernization and security remediation plan
 
 ## License
 
